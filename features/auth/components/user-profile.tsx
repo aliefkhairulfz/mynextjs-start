@@ -7,7 +7,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
 
-import { AuthCard } from '../../_components/auth-card';
+import { AuthCard } from './auth-card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
@@ -15,7 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { GetUserResponse } from '@/types/auth';
-import { authService } from '@/services/auth.service';
+import { authService } from '@/services/auth/auth.service';
 
 const profileSchema = z.object({
     fullName: z.string().min(2, { message: 'Full name must be at least 2 characters' }),
@@ -86,7 +86,7 @@ export function UserProfile({ user }: UserProfileProps) {
     }
 
     return (
-        <AuthCard title="Profile" description="Manage your account information and preferences.">
+        <AuthCard title="Profile" description="Manage your account information and preferences." imageSrc="https://res.cloudinary.com/diljekoto/image/upload/v1789123846/alaory-5e2Zme1mVDE-unsplash_ziafjj_537c8f.webp">
             <div className="space-y-6">
                 {/* User Avatar Summary Header */}
                 <div className="flex items-center justify-between p-3 rounded-lg bg-muted/30 border-2 border-border">

@@ -13,9 +13,9 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { authService } from '@/services/auth.service';
+import { authService } from '@/services/auth/auth.service';
 import { ApiException } from '@/services/types';
-import { AuthCard } from '../../_components/auth-card';
+import { AuthCard } from './auth-card';
 
 const signUpSchema = z
     .object({

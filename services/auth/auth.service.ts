@@ -1,4 +1,4 @@
-import { ApiException, ExceptionResponse, SuccessResponse } from './types';
+import { ApiException, ExceptionResponse, SuccessResponse } from '../types';
 import { getCookie } from '@/lib/utils';
 import { SignUpPayload, SignUpResponse, SignInPayload, SignInResponse, GetUserResponse, ConfirmVerificationPayload, ConfirmVerificationResponse, ResendVerificationPayload, ResendVerificationResponse, SignOutResponse } from '@/types/auth';
 

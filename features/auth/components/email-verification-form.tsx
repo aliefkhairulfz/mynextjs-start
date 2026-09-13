@@ -12,9 +12,9 @@ import { Clock, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@/components/ui/input-otp';
 import { Label } from '@/components/ui/label';
-import { authService } from '@/services/auth.service';
+import { authService } from '@/services/auth/auth.service';
 import { ApiException } from '@/services/types';
-import { AuthCard } from '../../_components/auth-card';
+import { AuthCard } from './auth-card';
 import { cn } from '@/lib/utils';
 
 const otpSchema = z.object({
@@ -103,7 +103,9 @@ function EmailVerificationFormContent() {
                 {/* OTP Expiration Limit Notice */}
                 <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground bg-muted/30 p-2.5 rounded-lg border border-border">
                     <Clock className="size-3.5 text-primary shrink-0" />
-                    <span>The verification code is valid for <strong>15 minutes</strong>.</span>
+                    <span>
+                        The verification code is valid for <strong>15 minutes</strong>.
+                    </span>
                 </div>
 
                 {/* OTP Input Field */}

@@ -9,12 +9,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
 import { Eye, EyeOff } from 'lucide-react';
 
-import { AuthCard } from '../../_components/auth-card';
+import { AuthCard } from './auth-card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { authService } from '@/services/auth.service';
+import { authService } from '@/services/auth/auth.service';
 import { ApiException } from '@/services/types';
 
 const signInSchema = z.object({
