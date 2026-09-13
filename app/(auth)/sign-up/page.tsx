@@ -1,5 +1,5 @@
-function SignInPage() {
-    return <div></div>;
-}
+import { SignUpForm } from './_components/sign-up-form';
 
-export default SignInPage;
+export default async function SignUpPage() {
+    return <SignUpForm />;
+}
