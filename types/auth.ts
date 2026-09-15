@@ -2,7 +2,7 @@ export type SignUpPayload = {
     name: string;
     email: string;
     password: string; // min 8 chars
-    providerId: 'credentials' | 'google';
+    providerId: 'CREDENTIALS' | 'GOOGLE';
 };
 
 export type SignUpResponse = {
@@ -18,7 +18,7 @@ export type SignUpResponse = {
 export type SignInPayload = {
     email: string;
     password: string;
-    providerId: 'credentials' | 'google';
+    providerId: 'CREDENTIALS' | 'GOOGLE';
 };
 
 export type SignInResponse = {

@@ -81,7 +81,7 @@ export function UserProfile({ user }: UserProfileProps) {
             toast.info('Signed out');
         } finally {
             setIsSigningOut(false);
-            router.push('/login');
+            router.push('/sign-in');
         }
     }
 

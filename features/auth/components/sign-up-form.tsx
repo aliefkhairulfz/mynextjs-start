@@ -63,7 +63,7 @@ export function SignUpForm() {
                 name: params.fullName,
                 email: params.email,
                 password: params.password,
-                providerId: 'credentials'
+                providerId: 'CREDENTIALS'
             });
             toast.success('Account created');
             router.push(`/email-verification?email=${encodeURIComponent(params.email)}`);
@@ -108,7 +108,7 @@ export function SignUpForm() {
                         <div className="relative">
                             <Input id="password" type={showPassword ? 'text' : 'password'} placeholder="••••••••" className="pr-10" aria-invalid={!!errors.password} {...register('password')} />
                             <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground" tabIndex={-1}>
-                                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                                {showPassword ? <Eye className="size-4" /> : <EyeOff className="size-4" />}
                             </button>
                         </div>
                         {errors.password && <p className="text-xs text-destructive">{errors.password.message}</p>}
@@ -121,7 +121,7 @@ export function SignUpForm() {
                         <div className="relative">
                             <Input id="confirmPassword" type={showConfirmPassword ? 'text' : 'password'} placeholder="••••••••" className="pr-10" aria-invalid={!!errors.confirmPassword} {...register('confirmPassword')} />
                             <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground" tabIndex={-1}>
-                                {showConfirmPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                                {showConfirmPassword ? <Eye className="size-4" /> : <EyeOff className="size-4" />}
                             </button>
                         </div>
                         {errors.confirmPassword && <p className="text-xs text-destructive">{errors.confirmPassword.message}</p>}

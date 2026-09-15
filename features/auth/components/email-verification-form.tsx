@@ -56,7 +56,7 @@ function EmailVerificationFormContent() {
                 otp: data.code
             });
             toast.success('Email Verified');
-            router.push('/login');
+            router.push('/sign-in');
         } catch (exception) {
             setError('code', {
                 type: 'manual',
